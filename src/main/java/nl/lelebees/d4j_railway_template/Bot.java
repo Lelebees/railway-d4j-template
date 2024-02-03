@@ -5,6 +5,7 @@ import discord4j.core.GatewayDiscordClient;
 import discord4j.core.object.presence.ClientActivity;
 import discord4j.core.object.presence.ClientPresence;
 import discord4j.rest.RestClient;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.annotation.Bean;
@@ -20,8 +21,8 @@ public class Bot {
 
 
     @Bean
-    public GatewayDiscordClient gatewayDiscordClient() {
-        return DiscordClientBuilder.create(System.getenv("BOT_TOKEN")).build()
+    public GatewayDiscordClient gatewayDiscordClient(@Value("${discord.bot.token}") String token) {
+        return DiscordClientBuilder.create(token).build()
             .gateway()
             .setInitialPresence(ignore -> ClientPresence.online(ClientActivity.listening("to /commands")))
             .login()
