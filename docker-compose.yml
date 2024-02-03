@@ -1,0 +1,6 @@
+version: "3.7"
+services:
+  discordbot:
+    build: ./
+    environment:
+      DISCORD_BOT_TOKEN: ${BOT_TOKEN}
