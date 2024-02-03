@@ -29,6 +29,6 @@ public class GreetCommand implements SlashCommand {
         //Reply to the slash command, with the name the user supplied
         return  event.reply()
             .withEphemeral(true)
-            .withContent("Hello, " + name);
+            .withContent("Hello, " + name + "!");
     }
 }
