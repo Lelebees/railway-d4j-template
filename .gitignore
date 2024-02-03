@@ -1,0 +1,5 @@
+# Exclude non project files
+.idea/
+
+# Exclude important files
+.env
