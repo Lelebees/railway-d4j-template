@@ -3,6 +3,8 @@
 This is a template for deploying Discord4J bots on Railway. It is based on the example Maven / Spring project from
 the [example repository](https://github.com/Discord4J/example-projects)
 
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/GnBRzM?referralCode=Lelebees)
+
 There are, also a few differences:
 
 - Java version `17`
